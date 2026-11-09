@@ -443,6 +443,28 @@ button:active {
     to { transform: scale(4); opacity: 0; }
 }
 
+.yt-acv > div,
+.tiktok-acv > div,
+.professional-acv > div {
+    position: relative;
+}
+
+.creator-trackrecord [data-period]::after {
+    content: attr(data-period);
+    position: absolute;
+    top: -13px;
+    right: 18px;
+    padding: 3px 12px;
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
 @media (max-width: 800px) {
     .container {
         flex-direction: column-reverse;
