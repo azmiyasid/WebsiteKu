@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Partnership | AzmiYasid</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../mystyleweb.css">
+        <link rel="stylesheet" href="mytombol%20css/formwa.css">
+        <link rel="stylesheet" href="mytombol%20css/partnership.css">
+        <script src="mytombol%20javascript/formwa.js"></script>
+        <script src="mytombol%20javascript/partnership.js" defer></script>
+    </head>
+    <body>
+        <main class="form-page">
+            <a class="back-link" href="../index.html">&larr; Kembali</a>
+            <h1 class="form-title">Partnership</h1>
+            <p class="form-sub">Isi form ini, lalu pesanmu akan disiapkan di WhatsApp.</p>
+            <form class="wa-form" id="form-wa" novalidate>
+                <div class="field">
+                    <label for="nama">Nama</label>
+                    <input id="nama" name="nama" type="text" placeholder="Nama lengkap" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="brand">Brand/Perusahaan</label>
+                    <input id="brand" name="brand" type="text" placeholder="Nama brand" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="jenis">Jenis kerja sama</label>
+                    <input id="jenis" name="jenis" type="text" placeholder="Contoh: endorse, konten bareng" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="kontak">Kontak (email/WA)</label>
+                    <input id="kontak" name="kontak" type="text" placeholder="email atau nomor WhatsApp" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="detail">Detail kerja sama <span class="opt">(opsional)</span></label>
+                    <textarea id="detail" name="detail" placeholder="Jelaskan singkat rencanamu"></textarea>
+                </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                <button type="submit" class="send-btn" id="send-btn">KIRIM</button>
+            </form>
+        </main>
+    </body>
+</html>

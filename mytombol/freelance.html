@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Freelance | AzmiYasid</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../mystyleweb.css">
+        <link rel="stylesheet" href="mytombol%20css/formwa.css">
+        <link rel="stylesheet" href="mytombol%20css/freelance.css">
+        <script src="mytombol%20javascript/formwa.js"></script>
+        <script src="mytombol%20javascript/freelance.js" defer></script>
+    </head>
+    <body>
+        <main class="form-page">
+            <a class="back-link" href="../index.html">&larr; Kembali</a>
+            <h1 class="form-title">Freelance</h1>
+            <p class="form-sub">Pilih paket edit video, lalu pesanmu akan disiapkan di WhatsApp.</p>
+            <form class="wa-form" id="form-wa" novalidate>
+                <div class="field">
+                    <label for="nama">Nama</label>
+                    <input id="nama" name="nama" type="text" placeholder="Nama lengkap" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="paket">Paket</label>
+                    <select id="paket" name="paket">
+                        <option value="">Pilih paket</option>
+                        <option>Free Edit (Rp 0)</option>
+                        <option>Pro Edit (Rp 100.000)</option>
+                        <option>Perfect Edit (Rp 135.000)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="durasi">Durasi video (menit)</label>
+                    <input id="durasi" name="durasi" type="number" placeholder="Contoh: 3" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="kontak">Kontak (email/WA)</label>
+                    <input id="kontak" name="kontak" type="text" placeholder="email atau nomor WhatsApp" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="brief">Link bahan/brief <span class="opt">(opsional)</span></label>
+                    <input id="brief" name="brief" type="text" placeholder="Link Google Drive, dll" autocomplete="off">
+                </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                <button type="submit" class="send-btn" id="send-btn">KIRIM</button>
+            </form>
+        </main>
+    </body>
+</html>
