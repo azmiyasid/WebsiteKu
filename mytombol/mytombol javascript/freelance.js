@@ -16,7 +16,6 @@ setupFormWA({
         { name: "nama",     label: "Nama",                 required: true },
         { name: "paket",    label: "Paket",                required: true },
         { name: "durasi",   label: "Durasi video (menit)", required: true },
-        { name: "deadline", label: "Deadline",             required: false },
         { name: "kontak",   label: "Kontak (email/WA)",    required: true },
         { name: "brief",    label: "Link bahan/brief",     required: false }
     ]
