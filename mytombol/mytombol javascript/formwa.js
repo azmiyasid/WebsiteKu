@@ -50,7 +50,7 @@ function setupFormWA(config) {
         });
 
         if (firstInvalid) {
-            status.textContent = "Lengkapi dulu kolom yang bertanda merah.";
+            status.textContent = "Please complete the fields marked in red.";
             status.className = "form-status is-error";
             firstInvalid.focus();
             return;
@@ -58,12 +58,12 @@ function setupFormWA(config) {
 
         sent = true;
         sendBtn.disabled = true;
-        sendBtn.textContent = "Terkirim!";
+        sendBtn.textContent = "Sent!";
         sendBtn.classList.add("is-sent");
         form.querySelectorAll("input, textarea").forEach((el) => (el.readOnly = true));
         form.querySelectorAll("select").forEach((el) => (el.disabled = true));
 
-        status.textContent = "Mengarahkan ke WhatsApp. Tekan tombol kirim di sana untuk menyelesaikan.";
+        status.textContent = "Redirecting to WhatsApp. Press send there to finish.";
         status.className = "form-status is-ok";
 
         const url = `https://wa.me/${NOMOR_WA}?text=${encodeURIComponent(buildMessage(data))}`;

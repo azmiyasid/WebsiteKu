@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    try {
+    if (/index\.html$/.test(location.pathname)) {
+        history.replaceState(null, "", location.pathname.replace(/index\.html$/, "") + location.search);
+    }
+    } catch (e) {}
 
     const header = document.querySelector("header");
     const navLinks = document.querySelectorAll(".nav-links a");
