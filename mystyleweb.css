@@ -541,7 +541,6 @@ button:active {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     transition: border-color 0.3s;
-    float: right;
 }
 
 .video-card:hover { border-color: var(--accent); }
