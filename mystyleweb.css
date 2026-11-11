@@ -535,7 +535,7 @@ button:active {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     transition: border-color 0.3s;
-    margin: auto;
+    justify-content: flex-end;
 }
 
 .video-card:hover { border-color: var(--accent); }
