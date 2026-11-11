@@ -495,9 +495,15 @@ button:active {
 
 .portofolio {
     display: flex;
-    flex-direction: column;
-    gap: 48px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px 40px;
 }
+
+.portofolio > h1 { flex: 0 0 100%; }
+
+.youtube-video { flex: 1 1 480px; min-width: 0; }
+.tiktok-video  { flex: 0 1 300px; min-width: 0; }
 
 .portofolio section {
     display: flex;
@@ -518,12 +524,12 @@ button:active {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
 }
 
 .video-grid--vertical {
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 300px));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 .video-card {
@@ -535,6 +541,7 @@ button:active {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     transition: border-color 0.3s;
+    float: right;
 }
 
 .video-card:hover { border-color: var(--accent); }
@@ -563,6 +570,11 @@ button:active {
     font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.4;
+}
+
+.card-link {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 @media (max-width: 640px) {
