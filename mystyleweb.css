@@ -495,9 +495,15 @@ button:active {
 
 .portofolio {
     display: flex;
-    flex-direction: column;
-    gap: 48px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px 40px;
 }
+
+.portofolio > h1 { flex: 0 0 100%; }
+
+.youtube-video { flex: 1 1 480px; min-width: 0; }
+.tiktok-video  { flex: 0 1 300px; min-width: 0; }
 
 .portofolio section {
     display: flex;
@@ -518,7 +524,7 @@ button:active {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
 }
 
