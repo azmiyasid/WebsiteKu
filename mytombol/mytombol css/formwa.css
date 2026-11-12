@@ -35,6 +35,7 @@
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field label { font-size: 0.9rem; font-weight: 700; }
 .field .opt { font-weight: 500; color: var(--muted); }
+.field .preferred { font-weight: 500; color: var(--muted); }
 
 .field input,
 .field select,
