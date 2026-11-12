@@ -46,23 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((s) => spy.observe(s));
 
-    const portofolio = document.getElementById('portofolio');
-    const playBtn = document.getElementById('playBtn');
-
-    playBtn.addEventListener('click', () => {
-      if (portofolio.paused) {
-        portofolio.play();
-        playBtn.textContent = '⏸ Pause';
-      } else {
-        portofolio.pause();
-        playBtn.textContent = '▶ Play';
-      }
-    });
-
-portofolio.addEventListener('ended', () => {
-  playBtn.textContent = '▶ Play';
-});
-
     const revealMap = [
         [".short-detail",                      "fx-slide-left",  0],
         [".mytombol",                          "fx-slide-right", 0],
