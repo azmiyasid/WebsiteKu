@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+    
 
     const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -44,6 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { rootMargin: "-40% 0px -55% 0px" });
 
     sections.forEach((s) => spy.observe(s));
+
+    const portofolio = document.getElementById('portofolio');
+    const playBtn = document.getElementById('playBtn');
+
+    playBtn.addEventListener('click', () => {
+      if (portofolio.paused) {
+        portofolio.play();
+        playBtn.textContent = '⏸ Pause';
+      } else {
+        portofolio.pause();
+        playBtn.textContent = '▶ Play';
+      }
+    });
+
+portofolio.addEventListener('ended', () => {
+  playBtn.textContent = '▶ Play';
+});
 
     const revealMap = [
         [".short-detail",                      "fx-slide-left",  0],
@@ -134,3 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".play-button");
+    if (!btn) return;
+    const video = btn.parentElement.querySelector("video");
+    if (!video) return;
+    if (video.paused) video.play().catch(() => {});
+    else video.pause();
+});
+
+const syncPlayButton = (e) => {
+    const video = e.target;
+    if (!(video instanceof HTMLVideoElement)) return;
+    const btn = video.parentElement.querySelector(".play-button");
+    if (!btn) return;
+    const playing = !video.paused;
+    btn.textContent = playing ? "\u23F8 Pause" : "\u25B6 Play";
+    btn.classList.toggle("is-playing", playing);
+};
+
+["play", "pause", "ended"].forEach((type) => document.addEventListener(type, syncPlayButton, true));
+
+document.addEventListener("play", (e) => {
+    if (!(e.target instanceof HTMLVideoElement)) return;
+    document.querySelectorAll(".video-frame video").forEach((v) => {
+        if (v !== e.target) v.pause();
+    });
+}, true);
