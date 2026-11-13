@@ -235,10 +235,161 @@ button:active {
     pointer-events: none;
 }
 
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+#myeducation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.education h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.mysmk {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 720px;
+}
+
+.mysmk h2 {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.mysmk > p { color: var(--muted); }
+
+.mysmk h3 {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sky);
+}
+
+.project-listed {
+    margin-top: 12px;
+    list-style: none;
+    counter-reset: project;
+}
+
+.project-item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 28px;
+    counter-increment: project;
+}
+
+.project-item:last-child { padding-bottom: 0; }
+
+.project-item::before {
+    content: counter(project, decimal-leading-zero);
+    z-index: 2;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(242, 177, 52, 0.4);
+    color: var(--accent-ink, #2a1d00);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.project-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    bottom: -4px;
+    left: 20px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--line));
+}
+
+.project-card {
+    flex: 1;
+    min-width: 0;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+    background: var(--surface-2);
+    border-color: var(--accent);
+}
+
+.project-card h4 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+.project-type {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.role-label {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.role-listed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.role-listed li {
+    padding: 4px 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
 .creator-trackrecord {
     display: flex;
     flex-direction: column;
     gap: 72px;
+}
+
+#trackrecord {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
 }
 
 .yt-acv,
@@ -498,6 +649,16 @@ button:active {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 32px 40px;
+}
+
+#portofolioku {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 28px 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
 }
 
 .portofolio > h1 { flex: 0 0 100%; }
