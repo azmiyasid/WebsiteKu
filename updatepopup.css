@@ -9,8 +9,7 @@ html.update-open { overflow: hidden; }
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    color: var(--text);
-    animation: update-popup-in 0.3s ease;
+    color: var(--text)
 }
 
 .update-popup[open] {
@@ -75,11 +74,38 @@ html.update-open { overflow: hidden; }
     outline-offset: 2px;
 }
 
-@keyframes update-popup-in {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: none; }
+.update-popup,
+.video-modal {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease, transform 0.3s ease,
+                overlay 0.3s ease allow-discrete,
+                display 0.3s ease allow-discrete;
+}
+
+.update-popup[open],
+.video-modal[open] { opacity: 1; transform: none; }
+
+.update-popup::backdrop,
+.video-modal::backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease,
+                overlay 0.3s ease allow-discrete,
+                display 0.3s ease allow-discrete;
+}
+
+.update-popup[open]::backdrop,
+.video-modal[open]::backdrop { opacity: 1; }
+
+@starting-style {
+    .update-popup[open],
+    .video-modal[open] { opacity: 0; transform: scale(0.7); }
+
+    .update-popup[open]::backdrop,
+    .video-modal[open]::backdrop { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .update-popup { animation: none; }
+    .update-popup, .video-modal,
+    .update-popup::backdrop, .video-modal::backdrop { transition: none; }
 }

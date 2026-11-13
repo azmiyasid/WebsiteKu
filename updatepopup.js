@@ -40,7 +40,7 @@
 
         dialog.addEventListener("close", () => {
             document.documentElement.classList.remove("update-open");
-            dialog.remove();
+            setTimeout(() => dialog.remove(), 350);
         });
 
         document.documentElement.classList.add("update-open");
