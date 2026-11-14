@@ -239,6 +239,7 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    color: hsl(0, 0%, 100%);
 }
 
 #myeducation {
@@ -267,7 +268,7 @@ button:active {
 
 .mysmk h2 {
     font-size: 1.25rem;
-    color: var(--accent);
+    color: #ffffff;
 }
 
 .mysmk > p { color: var(--muted); }
@@ -352,7 +353,7 @@ button:active {
 
 .role-label {
     margin-top: 14px;
-    color: var(--muted);
+    color: hsl(0, 0%, 100%);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -361,6 +362,7 @@ button:active {
 
 .role-listed {
     display: flex;
+    color: rgb(2, 204, 255);
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 8px;
