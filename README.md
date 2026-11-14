@@ -36,7 +36,7 @@ Setiap tombol membuka formulir singkat. Setelah diisi, pesannya disiapkan otomat
 
 ## Catatan
 
-Website ini dibuat dengan bantuan Claude AI (Free Plan), memakai GitHub yang terintegrasi dengan Vercel. Sebagian besar kodenya ditulis dengan bantuan Claude AI. Saya sendiri membuat kode HTML awalnya, merancang dan menambahkan fitur, mengedit dan mengatur tampilan, serta memperbaiki bug atau error yang muncul secara mandiri.
+Website ini dibuat dengan bantuan Claude AI (Free Plan), memakai GitHub yang terintegrasi dengan Vercel. Sebagian kodenya ditulis dengan bantuan Claude AI. Saya sendiri membuat kode HTML awalnya, merancang dan menambahkan fitur, mengedit dan mengatur tampilan, serta memperbaiki bug atau error yang muncul secara mandiri.
 
 ## Hak cipta
 
