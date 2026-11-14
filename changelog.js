@@ -6,7 +6,7 @@
         const modal = document.getElementById("changelogModal");
         if (!modal) return;
 
-        const CURRENT_VERSION = modal.dataset.version || "v1";
+        const CURRENT_VERSION = modal.dataset.version || "v4.0.0";
         const openBtn = document.getElementById("openChangelogBtn");
         const closeIcon = document.getElementById("closeModalIcon");
         const confirmBtn = document.getElementById("confirmReadBtn");
