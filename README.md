@@ -8,7 +8,7 @@ Ini proyek web profil pertama yang saya publikasikan. Website ini masih terus di
 
 Website ini adalah tempat saya memperkenalkan diri, menampilkan portofolio, dan membuka pintu bagi siapa saja yang ingin merekrut saya, memakai jasa saya, atau bekerja sama dengan saya.
 
-Website ini bukan proyek resmi dari kampus saya. Ini inisiatif dan ide saya sendiri untuk menerapkan apa yang saya pelajari di jurusan Sistem Informasi, serta pemahaman yang saya dapat selama belajar web developmet.
+Website ini bukan proyek resmi dari kampus saya. Ini inisiatif dan ide saya sendiri untuk menerapkan apa yang saya pelajari di jurusan Sistem Informasi, serta pemahaman yang saya dapat selama belajar web development.
 
 ## Fitur
 
@@ -26,6 +26,7 @@ Setiap tombol membuka formulir singkat. Setelah diisi, pesannya disiapkan otomat
 
 - HTML, CSS, dan JavaScript murni (Vanilla JS). Untuk sementara saya belum memakai framework.
 - Kode disimpan di GitHub dan ditayangkan lewat Vercel. GitHub terhubung langsung ke Vercel, jadi setiap perubahan yang saya kirim ke repo ikut tayang.
+- Kode dibuat dan diedit terlebih dahulu menggunakan Visual Studio Code di pc saya, kemudian saya commit dan saya sesuaikan di Github saya.
 
 ## Untuk pengunjung
 
@@ -36,7 +37,7 @@ Setiap tombol membuka formulir singkat. Setelah diisi, pesannya disiapkan otomat
 
 ## Catatan
 
-Website ini dibuat dengan bantuan Claude AI (Free Plan), memakai GitHub yang terintegrasi dengan Vercel. Sebagian kodenya ditulis dengan bantuan Claude AI. Saya sendiri membuat kode HTML awalnya, merancang dan menambahkan fitur, mengedit dan mengatur tampilan, serta memperbaiki bug atau error yang muncul secara mandiri.
+Website ini dibuat dengan bantuan Claude AI (Free Plan), memakai GitHub yang terintegrasi dengan Vercel. Saya yang menentukan bagaimana website ini bisa digunakan, saya yang menentukan kodenya, membuat arsitekturnya, menentukan fitur dan fungsinya, serta apa yang harus saya tambah, ubah dan saya kurangi. AI (Claude AI) membantu saya dalam mengambil keputusan, membuatkan kode yang kompleks dengan cepat dan praktis, memberi saran kode, dan merapikan kode hasil buatan saya. Perlu saya klarifikasi, tidak semua saran dan kode dari Claude AI saya gunakan, karena tidak semua saran dan kode sesuai dengan apa yang saya pikirkan dan saya rencanakan.
 
 ## Hak cipta
 
