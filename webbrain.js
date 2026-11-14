@@ -163,3 +163,52 @@ document.addEventListener("play", (e) => {
         if (v !== e.target) v.pause();
     });
 }, true);
+
+(() => {
+    const list = document.querySelector(".project-listed");
+    if (!list || !("IntersectionObserver" in window)) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    list.classList.add("anim-ready");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.filter((e) => e.isIntersecting).forEach((entry, i) => {
+            entry.target.style.setProperty("--d", `${i * 0.12}s`);
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+
+    list.querySelectorAll(".project-item").forEach((item) => observer.observe(item));
+})();
+
+(() => {
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.getElementById("nav-links");
+    if (!toggle || !menu) return;
+
+    const setOpen = (open) => {
+        menu.classList.toggle("is-open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+
+    toggle.addEventListener("click", () => setOpen(!menu.classList.contains("is-open")));
+
+    menu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && menu.classList.contains("is-open")) {
+            setOpen(false);
+            toggle.focus();
+        }
+    });
+
+    window.matchMedia("(min-width: 721px)").addEventListener("change", () => setOpen(false));
+})();
