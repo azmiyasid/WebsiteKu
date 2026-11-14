@@ -15,6 +15,8 @@
         <script src="gdrivepreview/videopreview.js" defer></script>
         <link rel="stylesheet" href="updatepopup.css">
         <script src="updatepopup.js" defer></script>
+        <link rel="stylesheet" href="cvdownload.css">
+        <script src="cvdownload.js" defer></script>
     </head>
     <body>
         <header>
@@ -32,6 +34,7 @@
                     <li><a href="#myeducation" data-target="myeducation">My Education</a></li>
                     <li><a href="#trackrecord" data-target="trackrecord">Track Record</a></li>
                     <li><a href="#portofolio" data-target="portofolio">Myportofolio</a></li>
+                    <li><a href="#cv-section" data-target="cv">MyCV</a></li>
                     <li><a href="#service" data-target="service">Service</a></li>
                 </ul>
             </nav>
@@ -299,6 +302,36 @@
                         </figure>
                     </div>
                 </section>
+            </div>
+            <div class="cv-section" id="cv">
+                <h1>MY CV</h1>
+                <p class="cv-subtitle">Pick the CV that matches the role you are looking for. Open a card to read a short introduction, then download it.</p>
+                <div class="cv-list">
+                    <button class="cv-card" type="button" data-cv-title="Content Creator" data-cv-file="CVdocuments/Azmi Yasid Alfarisi_Content Creator.pdf" data-cv-intro="I run my own YouTube and TikTok channels, where I share social media and IT tips. This CV shows how I create and publish content for those channels.">
+                        <span class="cv-card__label">CV</span>
+                        <span class="cv-card__title">Content Creator</span>
+                        <span class="cv-card__desc">YouTube and TikTok content for social media and IT topics.</span>
+                        <span class="cv-card__cta">Preview &amp; download &rarr;</span>
+                    </button>
+                    <button class="cv-card" type="button" data-cv-title="Video Editor" data-cv-file="CVdocuments/Azmi Yasid Alfarisi_Video Editor.pdf" data-cv-intro="I have edited reels and short videos during two internships and for my own channels. This CV focuses on my editing experience and the projects I have handled.">
+                        <span class="cv-card__label">CV</span>
+                        <span class="cv-card__title">Video Editor</span>
+                        <span class="cv-card__desc">Reels and short video editing, from raw footage to final cut.</span>
+                        <span class="cv-card__cta">Preview &amp; download &rarr;</span>
+                    </button>
+                    <button class="cv-card" type="button" data-cv-title="Video Creator" data-cv-file="CVdocuments/Azmi Yasid Alfarisi_Content Creator & Video Editor.pdf" data-cv-intro="I make videos from start to finish. In school I handled short film projects as scriptwriter, director, camera operator, and video editor. This CV is for roles that need one person to cover several parts of video production.">
+                        <span class="cv-card__label">CV</span>
+                        <span class="cv-card__title">Video Creator</span>
+                        <span class="cv-card__desc">Video production from idea and script to final edit.</span>
+                        <span class="cv-card__cta">Preview &amp; download &rarr;</span>
+                    </button>
+                    <button class="cv-card" type="button" data-cv-title="Social Media Specialist" data-cv-file="CVdocuments/Azmi Yasid Alfarisi_Social Media Specialist.pdf" data-cv-intro="I specialize in creating engaging social media content and managing online presence. This CV is for roles that require expertise in social media strategy and content creation.">
+                        <span class="cv-card__label">CV</span>
+                        <span class="cv-card__title">Social Media Specialist</span>
+                        <span class="cv-card__desc">Scripts, captions, and short stories.</span>
+                        <span class="cv-card__cta">Preview &amp; download &rarr;</span>
+                    </button>
+                </div>
             </div>
             <div class="service-forfreelance" id="service">
                 <section class="freelance-service">
