@@ -13,8 +13,8 @@
         <script src="webbrain.js" defer></script>
         <link rel="stylesheet" href="gdrivepreview/videopreview.css">
         <script src="gdrivepreview/videopreview.js" defer></script>
-        <link rel="stylesheet" href="updatepopup.css">
-        <script src="updatepopup.js" defer></script>
+        <link rel="stylesheet" href="changelog.css">
+        <script src="changelog.js" defer></script>
         <link rel="stylesheet" href="cvdownload.css">
         <script src="cvdownload.js" defer></script>
     </head>
@@ -36,10 +36,63 @@
                     <li><a href="#portofolio" data-target="portofolio">Myportofolio</a></li>
                     <li><a href="#cv-section" data-target="cv">MyCV</a></li>
                     <li><a href="#service" data-target="service">Service</a></li>
+                    <li><a href="feedback" data-target="mytombol/feedback.html">Feedback</a></li>
+                    <li><a href="changelogModal" id="openChangelogBtn" type="button">What's new<span class="unread-dot" id="unreadDot"></span></a></li>
                 </ul>
             </nav>
         </header>
         <main>
+            <div class="modal-overlay" id="changelogModal" data-version="v1.0.0" role="dialog" aria-modal="true" aria-labelledby="changelogTitle">
+                <div class="modal-card">
+                    <div class="modal-header">
+                        <span class="version-pill">v0.0.3</span>
+                        <h2 id="changelogTitle">What's new</h2>
+                        <p>Latest updates on my website</p>
+                        <button class="close-btn" id="closeModalIcon" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="changelog-item">
+                            <span class="badge badge-new">New</span>
+                            <div class="item-content">
+                                <h3>Added CV card</h3>
+                                <p>Add CVs for 4 roles, specifically for HR professionals, company directors or CEOs, as well as agencies, influencers and content creators who are currently looking to recruit staff or workers.</p>
+                            </div>
+                        </div>
+                        <div class="changelog-item">
+                            <span class="badge badge-new">New</span>
+                            <div class="item-content">
+                                <h3>Added Education</h3>
+                                <p>Adding my most recent educational qualifications, along with various video projects and competitions.</p>
+                            </div>
+                        </div>
+                        <div class="changelog-item">
+                            <span class="badge badge-new">New</span>
+                            <div class="item-content">
+                                <h3>Added Update Information</h3>
+                                <p>Users can now view website updates when they first open the site or whenever there is a new update. If you'd like to find out about updates, you can check the navigation bar.</p>
+                            </div>
+                        </div>
+                        <div class="changelog-item">
+                            <span class="badge badge-new">New</span>
+                            <div class="item-content">
+                                <h3>Added Feedback Button</h3>
+                                <p>If you have any suggestions, opinions, feedback or criticism, you can click the FEEDBACK button.</p>
+                            </div>
+                        </div>
+                        <div class="changelog-item">
+                            <span class="badge badge-fix">Fixed</span>
+                            <div class="item-content">
+                                <h3>Fixed Play Button</h3>
+                                <p>On mobile, the Play button will now disappear when tapped.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="release-date">Released: 9 November 2026</span>
+                        <button class="action-btn" id="confirmReadBtn" type="button">Got it</button>
+                    </div>
+                </div>
+            </div>
             <div class="container" id="about">
                 <section class="mytombol">
                     <button class="partnership" data-href="mytombol/partnership.html">Partnership</button>

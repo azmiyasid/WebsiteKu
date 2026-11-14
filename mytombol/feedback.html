@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Partnership | AzmiYasid</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image" href="pictureicon/LOGO AY.jpg">
+        <link rel="stylesheet" href="../mystyleweb.css">
+        <link rel="stylesheet" href="mytombol%20css/formwa.css">
+        <link rel="stylesheet" href="mytombol%20css/feedback.css">
+        <script src="mytombol%20javascript/formwa.js"></script>
+        <script src="mytombol%20javascript/feedback.js" defer></script>
+    </head>
+    <body>
+        <main class="form-page">
+            <a class="back-link" href="../">&larr; Back</a>
+            <h1 class="form-title">Feedback</h1>
+            <p class="form-sub">Fill in this form and your message will be prepared in WhatsApp.</p>
+            <form class="wa-form" id="form-wa" novalidate>
+                <div class="field">
+                    <label for="nama">Name</label>
+                    <input id="nama" name="nama" type="text" placeholder="Full name" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="masalah">Problem</label>
+                    <input id="masalah" name="masalah" type="text" placeholder="What issue are you experiencing?" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="jenis">Buttons or elements causing problems</label>
+                    <input id="jenis" name="jenis" type="text" placeholder="Example: The button isn't working" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="priority">Priority level</label>
+                    <input id="priority" name="priority" type="text" placeholder="How urgent is this issue?" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="detail">Feedback details <span class="opt">(optional)</span></label>
+                    <textarea id="detail" name="detail" placeholder="Provide more information about your feedback"></textarea>
+                </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                <button type="submit" class="send-btn" id="send-btn">SEND</button>
+            </form>
+        </main>
+    </body>
+</html>
