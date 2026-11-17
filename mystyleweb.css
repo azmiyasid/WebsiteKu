@@ -903,3 +903,15 @@ button:active {
         bottom: 8px;
     }
 }
+
+.text-link {
+    color: #6fb7e9;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.25s, text-decoration 0.25s;
+}
+
+.text-link:hover {
+    color: #3a86d9;
+    text-decoration: underline;
+}

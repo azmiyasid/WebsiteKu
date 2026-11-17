@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    const sections = ["about", "portfolio", "service"]
+    const sections = ["about", "portofolio", "service"]
         .map((id) => document.getElementById(id))
         .filter(Boolean);
 
