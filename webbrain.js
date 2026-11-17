@@ -9,22 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const navLinks = document.querySelectorAll(".nav-links a");
 
+    
     navLinks.forEach((link) => {
         link.addEventListener("click", (e) => {
-            e.preventDefault();
             const id = link.dataset.target;
 
+            if (link.hostname !== window.location.hostname) return;
+
+            e.preventDefault();
+
             if (id === "top") {
-                window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+                window.scrollTo({
+                    top: 0,
+                    behavior: reduceMotion ? "auto" : "smooth"
+                });
                 return;
             }
 
             const target = document.getElementById(id);
+
             if (target) {
-                target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+                target.scrollIntoView({
+                    behavior: reduceMotion ? "auto" : "smooth",
+                    block: "start"
+                });
             }
         });
     });
+
     
 
     const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
